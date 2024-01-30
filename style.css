@@ -23,6 +23,57 @@ body{
     
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Isso distribuirá os itens ao longo da largura do container */
+    background-color: var(--cor02);
+}
+
+.main-nav {
+    display: flex; /* Isso faz com que os itens dentro de cada nav fiquem lado a lado */
+    align-items: center; /* Isso centraliza verticalmente os itens dentro de cada nav */
+    /* Adiciona a cor de fundo desejada usando variável CSS */
+    padding: 0px 10px; /* Adiciona o preenchimento desejado */
+     /* Adiciona a sombra desejada */
+}
+
+
+.main-nav a{
+    margin-right: 15px; /* Isso adiciona um espaço à direita entre os itens para melhorar a aparência */
+    color: white; /* Adiciona a cor do texto desejada */
+    padding: 10px; /* Adiciona o preenchimento desejado */
+    border-radius: 5px; /* Adiciona a borda arredondada */
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+.main-nav a:hover {
+    color: var(--cor06); /* Adiciona a cor desejada ao passar o mouse */
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px; 
+    margin-top: 8px;
+}
+
+
+.social-media a {
+    margin-right: 25px; /* Mesma margem que em main-nav */
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.5s;
+}
+
+.social-media a:hover {
+     
+}
+
 header{
     background-image: linear-gradient(to bottom, var(--cor02), var(--cor00));
     text-align: center;
@@ -46,25 +97,8 @@ header > p{
     text-shadow: 2px 2px 0px rgba(0,0,0,0.514);
 }
 
-.main-nav{
-    background-color: var(--cor02);
-    padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0,0,0,0.363);
-}
 
-.main-nav > a{
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition-duration: .5;
-}
 
-.main-nav > a:hover{
-    /*background-color: var(--cor02);*/
-    color: var(--cor06);
-}
 
 main{
     min-width: 300px;
@@ -301,3 +335,157 @@ article > h1{
 }
 
 
+
+
+section.cont-ranking {
+    background: linear-gradient(to bottom, var(--cor01), var(--cor00));
+    padding-bottom: 30px;
+    /* Outras propriedades da sua seção... */
+}
+
+.cont-ranking  h1{
+    color: white;
+    font-weight: bold;
+    font-family: var(--fonte-padrao);
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+section.ranking {
+
+    display: flex;
+    justify-content: space-around; /* ou use 'space-between' para espaçamento entre as tabelas */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.table-container {
+    flex: 1;
+    max-width: 48%; /* Defina a largura máxima desejada para cada tabela */
+}
+
+
+
+/* Remova a largura fixa da tabela para que ela se ajuste à largura máxima permitida */
+.table-container table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+
+.table-container:not(:last-child) {
+    margin-right: 10px;
+}
+
+.masc caption,
+.fem caption {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.masc,
+.fem {
+    background-color: white;
+}
+
+.masc th,
+.fem th {
+    color: var(--cor01);
+    font-family: var(--fonte-destaque);
+    font-size: 45px;
+    text-align: center;
+    padding: 8px;
+}
+
+.masc td,
+.fem td {
+    padding: 8px;
+    border-bottom: 0.8px solid var(--cor00);
+}
+
+.masc td:last-child,
+.fem td:last-child {
+    border-bottom: none;
+}
+
+.masc td .nome,
+.fem td .nome,
+.masc td .equipe,
+.fem td .equipe {
+    font-family: var(--fonte-padrao);
+}
+
+.masc td .nome,
+.fem td .nome {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.masc td .equipe,
+.fem td .equipe {
+    font-size: 14px;
+}
+
+
+.pontuaçao{
+    font-family: var(--fonte-padrao);
+    font-size: 30px;
+    text-align: right;
+}
+
+.todos{
+    border: 2px solid white;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 7px 7px rgba(0,0,0,0.363);
+    width: 100%;
+    margin-left: 10px;
+
+}
+
+.todos a {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    transition-duration: 0.5s; /* Adicione 's' para indicar segundos na duração da transição */
+}
+
+.todos a:hover {
+    color: var(--cor06);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.363);
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paragraphs {
+    display: flex;
+}
+
+footer p{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 11px;
+   margin: 20px 10px;
+}

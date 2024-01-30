@@ -8,17 +8,24 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div>
-        <nav class="main-nav">
-            <a href="#">FJJCE</a>
-            <a href="#">Campeonatos</a>
-            <a href="#">Faixas Pretas</a>
-            <a href="#">Rankings</a>
-            <a href="#">Academias</a>
-            <a href="#">Atletas</a>
-            <!--<a href="#">Regras</a>*-->
-            <a href="#">Noticias</a>
-        </nav>
+    <div class="linha">
+
+        <div class="nav-container">
+            <nav class="main-nav">
+                <a href="#">FJJCE</a>
+                <a href="#">Campeonatos</a>
+                <a href="#">Faixas Pretas</a>
+                <a href="#">Rankings</a>
+                <a href="#">Academias</a>
+                <a href="#">Atletas</a>
+                <!--<a href="#">Regras</a>*-->
+                <a href="#" id="insta">Noticias</a>
+            </nav>
+            <nav class="social-media">
+                <a href="https://www.instagram.com/fjjce_oficial/" target="_blank"><img src="Imagens/01 Gradient Glyph/Instagram_Glyph_Gradient-25x25.png" alt="logo instagram" id="insta"></a>
+                <a href="#"><img src="Imagens/Primary Logo/Facebook_Logo_Primary-25x25.png" alt="logo facebook" ></a>
+            </nav>
+        </div>
         <header>
             <img src="Imagens/logo FJJCE-350.png" alt="FJJCE">
             <p>Federação de Jiu-Jitsu do estado do Ceará</p>
@@ -141,20 +148,124 @@
             </div>
         </section>
         
-        <article>
-            <h1>Ranking FJJCE 2024</h1>
-            <table>
-
-            </table>
-        </article>
-        <aside>
-
-        </aside>
+        
+            <section class="cont-ranking" >
+                <h1>Ranking FJJCE 2024</h1>
+                <section class="ranking">
+                    <div class="table-container">
+                        <table class="masc">
+                            <caption>Masculino Adulto Preta</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="posiçao">1</th>
+                                    <td class="atleta">
+                                        <div class="nome">André Oliveira</div>
+                                        <div class="equipe">Leões do Tatame Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">372.0</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">2</th>
+                                    <td class="atleta">
+                                        <div class="nome">Bruno Silva</div>
+                                        <div class="equipe">Dragões da Guarda Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">299.5</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">3</th>
+                                    <td class="atleta">
+                                        <div class="nome">Carlos Santos</div>
+                                        <div class="equipe">Fênix Brazilian Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">291.0</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">4</th>
+                                    <td class="atleta">
+                                        <div class="nome">Rafael Pereira</div>
+                                        <div class="equipe">Panteras da Arte Suave Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">270.0</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">5</th>
+                                    <td class="atleta">
+                                        <div class="nome">Marcos Costa</div>
+                                        <div class="equipe">Águias da Ribeira Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">258.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="todos">
+                            <a href="#">ver todos</a>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="fem">
+                            <caption>Feminino Adulto Preta</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="posiçao">1</th>
+                                    <td class="atleta">
+                                        <div class="nome">Camila Oliveira</div>
+                                        <div class="equipe">Leões do Tatame Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">372.0</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">2</th>
+                                    <td class="atleta">
+                                        <div class="nome">Bruna Silva</div>
+                                        <div class="equipe">Dragões da Guarda Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">299.5</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">3</th>
+                                    <td class="atleta">
+                                        <div class="nome">Clara Santos</div>
+                                        <div class="equipe">Fênix Brazilian Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">291.0</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">4</th>
+                                    <td class="atleta">
+                                        <div class="nome">Isabella Pereira</div>
+                                        <div class="equipe">Panteras da Arte Suave Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">270.0</td>
+                                </tr>
+                                <tr>
+                                    <th class="posiçao">5</th>
+                                    <td class="atleta">
+                                        <div class="nome">Marina Costa</div>
+                                        <div class="equipe">Águias da Ribeira Jiu-Jitsu</div>
+                                    </td>
+                                    <td class="pontuaçao">258.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="todos">
+                            <a href="#">ver todos</a>
+                        </div>
+                    </div>
+                </section>
+               
+            </section>
+       
+       
     </main>
     <footer>
-        <img src="" alt="">
-        <a href=""><img src="" alt=""></a>
-        <p>Federação Cearensede Jiu-Jitsu,2024. All Rights Reserved.</p>
+        <img src="Imagens/logo FJJCE-150.png" alt="">
+        <div class="paragraphs">
+            <p>Federação de Jiu-Jitsu do estado do Ceará,2024.</p>
+            <p>Desenvolvido por João Gurgel Romero</p>
+        </div>
     </footer>
+
 </body>
 </html>
