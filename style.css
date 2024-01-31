@@ -93,14 +93,15 @@ body{
     }
 
     .main-nav {
-        display: none; /* Esconde a navegação principal inicialmente em telas pequenas */
+        display: none;
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 60px; /* Ajuste conforme necessário para o espaçamento desejado abaixo do botão */
+        top: 60px;
         left: 0;
         width: 30%;
         background-color: var(--cor02);
+        margin-top: 0px;
         margin-left: 10px;
         z-index: 1;
     }
@@ -110,7 +111,6 @@ body{
         width: 100%;
         color: white;
         padding: 10px;
-        /*border-radius: 5px;*/
         text-decoration: none;
         text-align: left;
         font-weight: bold;
