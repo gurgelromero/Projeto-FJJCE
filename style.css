@@ -25,24 +25,25 @@ body{
 
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Isso distribuirá os itens ao longo da largura do container */
+    justify-content: space-between; 
     background-color: var(--cor02);
 }
 
 .main-nav {
-    display: flex; /* Isso faz com que os itens dentro de cada nav fiquem lado a lado */
-    align-items: center; /* Isso centraliza verticalmente os itens dentro de cada nav */
-    /* Adiciona a cor de fundo desejada usando variável CSS */
-    padding: 0px 10px; /* Adiciona o preenchimento desejado */
-     /* Adiciona a sombra desejada */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px; 
+    /*align-items: center; 
+    padding: 0px 10px; */
 }
 
 
 .main-nav a{
-    margin-right: 15px; /* Isso adiciona um espaço à direita entre os itens para melhorar a aparência */
-    color: white; /* Adiciona a cor do texto desejada */
-    padding: 10px; /* Adiciona o preenchimento desejado */
-    border-radius: 5px; /* Adiciona a borda arredondada */
+    /*margin-right: 15px; */
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition-duration: 0.5s;
@@ -55,7 +56,8 @@ body{
 .social-media {
     display: flex;
     align-items: center;
-    padding: 0px 10px; 
+    flex-wrap: wrap;
+    padding: 0px /*10px*/; 
     margin-top: 8px;
 }
 
@@ -73,6 +75,61 @@ body{
 .social-media a:hover {
      
 }
+
+.menu-btn {
+    display: none; /* Inicialmente, o botão de menu está escondido */
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--cor02);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .main-nav {
+        display: none; /* Esconde a navegação principal inicialmente em telas pequenas */
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário para o espaçamento desejado abaixo do botão */
+        left: 0;
+        width: 30%;
+        background-color: var(--cor02);
+        margin-left: 10px;
+        z-index: 1;
+    }
+
+    .main-nav a {
+        display: block;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        /*border-radius: 5px;*/
+        text-decoration: none;
+        text-align: left;
+        font-weight: bold;
+        border-bottom: 1px solid var(--cor00);
+        transition-duration: 1s;
+        margin: 0px;
+       
+    }
+
+    .main-nav a:hover {
+        color: var(--cor06);
+    }
+
+    /* Revela a navegação principal quando o mouse está sobre o botão de menu */
+    .menu-btn:hover + .main-nav {
+        display: flex;
+    }
+}
+
 
 header{
     background-image: linear-gradient(to bottom, var(--cor02), var(--cor00));
@@ -98,7 +155,9 @@ header > p{
 }
 
 
-
+/*********************************************************
+                        EVENTOS
+**********************************************************/
 
 main{
     min-width: 300px;
@@ -237,8 +296,8 @@ div.regras{
 
     div.conteiner {
         flex-direction: column;
-        margin-left: 20px;
-        margin-right: 20px;
+        align-items: center;
+        margin: 0px 20px;
     }
 
     div.eventos {
@@ -340,6 +399,19 @@ div.regras{
    
 }
 
+
+
+@media screen and (max-width: 1400px) {
+    .noticias {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .noticias > div {
+        margin-bottom: 20px;
+    }
+}
+
 article{
     background-color: var(--cor01);
 }
@@ -355,12 +427,13 @@ article > h1{
 }
 
 
-
+/*********************************************************
+                            RANKINGS
+**********************************************************/
 
 section.cont-ranking {
     background: linear-gradient(to bottom, var(--cor01), var(--cor00));
     padding-bottom: 30px;
-    /* Outras propriedades da sua seção... */
 }
 
 .cont-ranking  h1{
@@ -374,21 +447,18 @@ section.cont-ranking {
 }
 
 section.ranking {
-
     display: flex;
-    justify-content: space-around; /* ou use 'space-between' para espaçamento entre as tabelas */
+    justify-content: space-around;
     margin-left: 30px;
     margin-right: 30px;
+    flex-wrap: wrap;
 }
 
 .table-container {
     flex: 1;
-    max-width: 48%; /* Defina a largura máxima desejada para cada tabela */
+    max-width: 48%; 
 }
 
-
-
-/* Remova a largura fixa da tabela para que ela se ajuste à largura máxima permitida */
 .table-container table {
     border-collapse: collapse;
     width: 100%;
@@ -483,12 +553,19 @@ section.ranking {
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
-    transition-duration: 0.5s; /* Adicione 's' para indicar segundos na duração da transição */
+    transition-duration: 0.5s; 
 }
 
 .todos a:hover {
     color: var(--cor06);
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.363);
+}
+
+@media screen and (max-width: 768px) {
+    .table-container {
+        max-width: 100%; /* Em telas menores, ocupar toda a largura disponível */
+        margin-bottom: 20px; /* Adicionar espaçamento entre as tabelas */
+    }
 }
 
 
